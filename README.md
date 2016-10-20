@@ -2,7 +2,7 @@
 
 ## 效果图
 
-成功!
+成功
 ![](imgs/success.png)
 失败/错误
 ![](imgs/error.png)
