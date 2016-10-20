@@ -1,4 +1,12 @@
 # alertBox简单的美化版alert
+
+## 效果图
+
+成功![](imgs/success.png)
+失败/错误![](imgs/error.png)
+普通信息![](imgs/info.png)
+警告![](imgs/warning.png)
+
 ## 简单的调用
 
 ```
