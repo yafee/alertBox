@@ -1,11 +1,6 @@
 # alertBox简单的美化版alert
 
-## 效果图
-
-成功![](imgs/success.png)
-失败![](imgs/error.png)
-信息![](imgs/info.png)
-警告![](imgs/warning.png)
+> 效果图在imgs文件目录下
 
 ## 简单的调用
 
