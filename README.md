@@ -1,15 +1,20 @@
 # alertBox简单的美化版alert
-> 简单的调用
+## 简单的调用
 
 ```
-$.alertBox({
-  text:'xxxxx',
+$.alertBox(options)
+<!-- options可以为对象 -->
+options = {
+  text:'xxxx',
   type:'type',
-  textColor:'#***',
-  fontSize:'*px'
-})
+  textColor:'#******',
+  fontSize:'*'
+}
+<!-- 或者数组,必须按顺序 -->
+options = ['text','type','textColor','fontSize']
+
 ```
-> 参数说明
+## 参数说明
 
 `text:`必选项，弹出的信息
 
