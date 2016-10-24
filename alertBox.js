@@ -1,1 +1,21 @@
-$.extend({alertBox:function(a){var b=textColor=fontSize=type="";a instanceof Array?(b=a[0],type=a[1],textColor=a[2],fontSize=a[3]):(b=a.text,type=a.type,textColor=a.textColor,fontSize=a.fontSize),$("<div class='cover'></div>").appendTo($("body")),$("<div class='alertBox'><div class='alertText'></div><div class='alertBtn'>+</div></div>").appendTo($("body")).addClass(type).css("visibility","visible"),fontSize=a.fontSize?a.fontSize:Number($(".alertText").css("fontSize").slice(0,-2)),$(".alertText").html(b).css({color:textColor,"font-size":fontSize,lineHeight:fontSize+8+"px"}),$(".alertBtn").addClass("activeBtn").on("click",function(){$(this).removeClass("activeBtn"),$(this).parent("").fadeOut("fast",function(){$(".cover").fadeOut("fast")})})}});
+$.extend({
+  alertBox: function(options) {
+    var text = textColor = fontSize = type = "";
+    if (options instanceof Array) {
+      text = options[0];
+      type = options[1];
+      textColor = options[2];
+      fontSize = options[3];
+    } else {
+      text = options.text;
+      type = options.type;
+      textColor = options.textColor;
+      fontSize = options.fontSize;
+    }
+    $("<div class='cover'></div>").appendTo($("body"));
+    $("<div class='alertBox'><div class='alertText'></div><div class='alertBtn'>+</div></div>").appendTo($("body")).addClass(type).css("visibility", "visible");
+    fontSize = options.fontSize ? options.fontSize : Number($(".alertText").css("fontSize").slice(0, -2));
+    $(".alertText").html(text).css({ color: textColor, "font-size": fontSize, lineHeight: fontSize + 8 + "px" });
+    $(".alertBtn").addClass("activeBtn").on("click", function() { $(this).removeClass("activeBtn"), $(this).parent("").fadeOut("fast", function() { $(".cover").fadeOut("fast"); }); });
+  }
+});
